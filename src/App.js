@@ -1,17 +1,17 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar } from "./components/Navbar/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MyNavbar } from "./components/Navbar/MyNavbar";
 import { Home } from "./components/Home/Home";
 import { Projects } from "./components/Projects/Projects";
 import { Route, Routes, Navigate } from "react-router-dom";
+import styles from "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <MyNavbar />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/Home" />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Projects" element={<Projects />} />
       </Routes>

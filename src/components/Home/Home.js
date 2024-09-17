@@ -34,15 +34,101 @@ export const Home = () => {
                     >
                       Contact
                     </Button>
-                  </Link> */} 
+                  </Link> */}
                 </Col>
               </Row>
             </Col>
           </Row>
         </Container>
       </section>
-      <section className={styles.about}>
+
+      <section className={styles.skills}>
         <Container>
+          <Row className="d-flex py-4 align-items-center justify-content-center">
+            <Col md={12} className="">
+              <h2>technical skills.</h2>
+            </Col>
+          </Row>
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Programming Languages:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>JavaScript</h3>
+              <h3 className={styles["skill-box"]}>TypeScript</h3>
+              <h3 className={styles["skill-box"]}>Python</h3>
+              <h3 className={styles["skill-box"]}>Java</h3>
+            </Col>
+          </Row>
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Web Development Technologies:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>HTML</h3>
+              <h3 className={styles["skill-box"]}>CSS</h3>
+              <h3 className={styles["skill-box"]}>Bootstrap</h3>
+              <h3 className={styles["skill-box"]}>React</h3>
+              <h3 className={styles["skill-box"]}>React Native</h3>
+              <h3 className={styles["skill-box"]}>APIs</h3>
+            </Col>
+          </Row>
+
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Tools and Technologies:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>RStudio</h3>
+              <h3 className={styles["skill-box"]}>Git</h3>
+              <h3 className={styles["skill-box"]}>Maven</h3>
+              <h3 className={styles["skill-box"]}>AWS</h3>
+            </Col>
+          </Row>
+
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Databases:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>SQL</h3>
+              <h3 className={styles["skill-box"]}>NoSQL</h3>
+              <h3 className={styles["skill-box"]}>Snowflake</h3>
+              <h3 className={styles["skill-box"]}>Firebase</h3>
+              <h3 className={styles["skill-box"]}>Database Schema</h3>
+            </Col>
+          </Row>
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Methodologies and Practices:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>Agile</h3>
+              <h3 className={styles["skill-box"]}>Scrum</h3>
+              <h3 className={styles["skill-box"]}>DevOps</h3>
+              <h3 className={styles["skill-box"]}>OOP</h3>
+              <h3 className={styles["skill-box"]}>TDD</h3>
+              <h3 className={styles["skill-box"]}>BDD</h3>
+            </Col>
+          </Row>
+
+          <Row className="d-flex py-0 align-items-center justify-content-center">
+            <Col md={4} className="text-left">
+              <h4>Testing:</h4>
+            </Col>
+            <Col md={8} className={styles["skill-box-container"]}>
+              <h3 className={styles["skill-box"]}>WebDriver</h3>
+              <h3 className={styles["skill-box"]}>JUnit</h3>
+              <h3 className={styles["skill-box"]}>Cucumber</h3>
+              <h3 className={styles["skill-box"]}>Jest</h3>
+              <h3 className={styles["skill-box"]}>Postman</h3>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className={styles.about}>
+        {/* <Container>
           <Row className="d-flex py-4 align-items-center justify-content-center">
             <Col md={12} className="text-center">
               <h1>About Me</h1>
@@ -69,8 +155,8 @@ export const Home = () => {
                 <br /> <br />
                 Values - compassion, integrity and development.
                 <br /> <br />
-                Some of my hobbies away from the screens are runnning, tennis,
-                traveling and cooking.
+                Some of my hobbies away from the screens are runnning, tennis
+                and cooking.
               </p>
             </Col>
             <Col
@@ -84,64 +170,62 @@ export const Home = () => {
               ></img>
             </Col>
           </Row>
-        </Container>
-      </section>
-      <section className={styles.skills}>
+        </Container> */}
         <Container>
           <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={9} className="text-center">
-              <h2>Skills</h2>
+            <Col md={8}>
+              <Row>
+                <h1>coding experience.</h1>
+              </Row>
+              <Row>
+                <ul>
+                  <li>
+                    University of Leeds - First-Class Honors in Mathematics,
+                    with my dissertation in Computational Applied Mathematics
+                    using Python.
+                  </li>
+                  <li>
+                    Northcoders - full time, 3 month, software development
+                    bootcamp. JavaScript was the predominant language.
+                  </li>
+                  <li>
+                    Corecom Technology Academy - 1 month training course on SQL
+                    development and data warehousing using Snowflake. 1 month
+                    training course on Java development and Web Testing with Web
+                    Driver and JUnit.
+                  </li>
+
+                  {/* <li>
+                    Corecom Technology Academy - 1 month training course on Java
+                    development and Web Testing with Web Driver and JUnit.
+                  </li> */}
+                  <li>
+                    Corecom Technology Academy - Assistant trainer for Test
+                    Automation cohorts using Java. Explaining complex concepts
+                    to students, debugging and providing code advice.
+                  </li>
+                  <li>
+                    Corecom Technology Academy - Solo backend and frontend
+                    internal projects created for the company.
+                  </li>
+                  <li>
+                    QA Cloud Academy Certificates - Technical Essentials of AWS
+                    (23hrs), Fundamentals of AWS (20hrs), DevOps Fundamentals
+                    (10hrs) and Cloud Literacy (3hrs).
+                  </li>
+                  <li>Personal Projects - Some of which listed below</li>
+                </ul>
+              </Row>
             </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Programming Languages:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>JavaScript</h3>
-              <h3 className={styles["skill-box"]}>TypeScript</h3>
-              <h3 className={styles["skill-box"]}>Python</h3>
-              <h3 className={styles["skill-box"]}>Java</h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Web Development Technologies:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>HTML</h3>
-              <h3 className={styles["skill-box"]}>CSS</h3>
-              <h3 className={styles["skill-box"]}>Bootstrap</h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Tools and Technologies:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>Git</h3>
-              <h3 className={styles["skill-box"]}>VS Code</h3>
-              <h3 className={styles["skill-box"]}>Snowflake</h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Databases:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>PostgreSQL</h3>
-              <h3 className={styles["skill-box"]}>MongoDB </h3>
-              <h3 className={styles["skill-box"]}>MySQL </h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Methodologies and Practices:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>PostgreSQL</h3>
-              <h3 className={styles["skill-box"]}>MongoDB </h3>
-              <h3 className={styles["skill-box"]}>MySQL </h3>
+            <Col
+              md={4}
+              className="d-flex align-items-center justify-content-center"
+            >
+              <img
+                src={YoussefImage}
+                class="img-fluid"
+                alt="Image of Youssef"
+              ></img>
             </Col>
           </Row>
         </Container>
