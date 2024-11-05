@@ -1,10 +1,10 @@
 import React from "react";
 import { Navbar } from "./components/Navbar/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Home } from "./components/Home/Home";
+import Home from "./components/Home/Home";
 import { Projects } from "./components/Projects/Projects";
 import { Route, Routes, Navigate } from "react-router-dom";
-import styles from "./App.css";
+import "./App.css";
 
 function App() {
   return (

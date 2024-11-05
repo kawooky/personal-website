@@ -1,258 +1,180 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import styles from "./Home.module.css";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import YoussefImage from "./10442350_8503992191299832-modified.png";
+import styles from "./Home.module.css";
+import { projects } from "../Projects/projectsData.js"; // Import the projects array
 
-export const Home = () => {
+const Home = () => {
+  const topProjects = projects.slice(0, 3);
+
   return (
     <div className={styles.home}>
-      <section className={styles.hero}>
-        <Container fluid className={styles["hero-info-container"]}>
-          <Row className={`fluid ${styles["hero-info-container-row"]}`}>
-            <Col md={6} className="text-center">
-              <h1>Youssef Kawook</h1>
-              <h5>A Full Stack Developer currently based in Leeds, UK.</h5>
-              <Row className={styles["hero-buttons-row"]}>
-                <Col>
-                  {/* <Link to="/Menu">
-                    <Button
-                      className={`m-4 btn btn-primary btn-lg ${styles.buttons}`}
-                      variant="primary"
-                      href="/Menu"
-                    >
-                      Menu
-                    </Button>
-                  </Link>
-
-                  <Link to="/Contact">
-                    <Button
-                      className={`m-4 btn btn-primary btn-lg ${styles.buttons}`}
-                      variant="primary"
-                      href="/Contact"
-                    >
-                      Contact
-                    </Button>
-                  </Link> */}
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <section className={styles.skills}>
-        <Container>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={12} className="">
-              <h2>technical skills.</h2>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Programming Languages:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>JavaScript</h3>
-              <h3 className={styles["skill-box"]}>TypeScript</h3>
-              <h3 className={styles["skill-box"]}>Python</h3>
-              <h3 className={styles["skill-box"]}>Java</h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Web Development Technologies:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>HTML</h3>
-              <h3 className={styles["skill-box"]}>CSS</h3>
-              <h3 className={styles["skill-box"]}>Bootstrap</h3>
-              <h3 className={styles["skill-box"]}>React</h3>
-              <h3 className={styles["skill-box"]}>React Native</h3>
-              <h3 className={styles["skill-box"]}>APIs</h3>
-            </Col>
-          </Row>
-
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Tools and Technologies:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>RStudio</h3>
-              <h3 className={styles["skill-box"]}>Git</h3>
-              <h3 className={styles["skill-box"]}>Maven</h3>
-              <h3 className={styles["skill-box"]}>AWS</h3>
-            </Col>
-          </Row>
-
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Databases:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>SQL</h3>
-              <h3 className={styles["skill-box"]}>NoSQL</h3>
-              <h3 className={styles["skill-box"]}>Snowflake</h3>
-              <h3 className={styles["skill-box"]}>Firebase</h3>
-              <h3 className={styles["skill-box"]}>Database Schema</h3>
-            </Col>
-          </Row>
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Methodologies and Practices:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>Agile</h3>
-              <h3 className={styles["skill-box"]}>Scrum</h3>
-              <h3 className={styles["skill-box"]}>DevOps</h3>
-              <h3 className={styles["skill-box"]}>OOP</h3>
-              <h3 className={styles["skill-box"]}>TDD</h3>
-              <h3 className={styles["skill-box"]}>BDD</h3>
-            </Col>
-          </Row>
-
-          <Row className="d-flex py-0 align-items-center justify-content-center">
-            <Col md={4} className="text-left">
-              <h4>Testing:</h4>
-            </Col>
-            <Col md={8} className={styles["skill-box-container"]}>
-              <h3 className={styles["skill-box"]}>WebDriver</h3>
-              <h3 className={styles["skill-box"]}>JUnit</h3>
-              <h3 className={styles["skill-box"]}>Cucumber</h3>
-              <h3 className={styles["skill-box"]}>Jest</h3>
-              <h3 className={styles["skill-box"]}>Postman</h3>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      <section className={styles.about}>
-        {/* <Container>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={12} className="text-center">
-              <h1>About Me</h1>
-            </Col>
-          </Row>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col
-              md={8}
-              className="d-flex align-items-center justify-content-center"
-            >
-              <p>
-                In 2021, I graduated from The University of Leeds with a first
-                in Mathematics. <br />
-                <br />
-                February 2023, I completed the Northcoders full-time, 13-week
-                software development bootcamp. <br /> <br />
-                I'm at the start of my professional career, looking for work
-                that will allow me to develop both my technical and soft skills.
-                <br /> <br />
-                In the distant future, I wish to be an expert of my craft and a
-                leader working towards making a positive change.
-                <br /> <br />
-                Strengths - drive, teamwork and problem solving
-                <br /> <br />
-                Values - compassion, integrity and development.
-                <br /> <br />
-                Some of my hobbies away from the screens are runnning, tennis
-                and cooking.
+      {/* Hero Section */}
+      <section className={`${styles.hero} bg-light text-dark py-5`}>
+        <Container className="text-center">
+          <Row className="align-items-center">
+            <Col md={6} className="mx-auto">
+              <h1 className={styles.heroTitle}>Youssef Kawook</h1>
+              <p className={styles.heroSubtitle}>
+                Full Stack Developer based in Leeds, UK
               </p>
             </Col>
-            <Col
-              md={4}
-              className="d-flex align-items-center justify-content-center"
-            >
-              <img
-                src={YoussefImage}
-                class="img-fluid"
-                alt="Image of Youssef"
-              ></img>
-            </Col>
           </Row>
-        </Container> */}
-        <Container>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={8}>
-              <Row>
-                <h1>coding experience.</h1>
-              </Row>
-              <Row>
-                <ul>
-                  <li>
-                    University of Leeds - First-Class Honors in Mathematics,
-                    with my dissertation in Computational Applied Mathematics
-                    using Python.
-                  </li>
-                  <li>
-                    Northcoders - full time, 3 month, software development
-                    bootcamp. JavaScript was the predominant language.
-                  </li>
-                  <li>
-                    Corecom Technology Academy - 1 month training course on SQL
-                    development and data warehousing using Snowflake. 1 month
-                    training course on Java development and Web Testing with Web
-                    Driver and JUnit.
-                  </li>
+        </Container>
+      </section>
 
-                  {/* <li>
-                    Corecom Technology Academy - 1 month training course on Java
-                    development and Web Testing with Web Driver and JUnit.
-                  </li> */}
-                  <li>
-                    Corecom Technology Academy - Assistant trainer for Test
-                    Automation cohorts using Java. Explaining complex concepts
-                    to students, debugging and providing code advice.
-                  </li>
-                  <li>
-                    Corecom Technology Academy - Solo backend and frontend
-                    internal projects created for the company.
-                  </li>
-                  <li>
-                    QA Cloud Academy Certificates - Technical Essentials of AWS
-                    (23hrs), Fundamentals of AWS (20hrs), DevOps Fundamentals
-                    (10hrs) and Cloud Literacy (3hrs).
-                  </li>
-                  <li>Personal Projects - Some of which listed below</li>
-                </ul>
-              </Row>
+      {/* Skills Section */}
+      <section className="py-5 bg-white">
+        <Container>
+          <h2 className="text-center mb-4">Technical Skills</h2>
+          {[
+            {
+              title: "Programming Languages",
+              skills: ["JavaScript", "TypeScript", "Python", "Java"],
+            },
+            {
+              title: "Web Development Technologies",
+              skills: [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "React",
+                "React Native",
+                "APIs",
+              ],
+            },
+            {
+              title: "Tools and Technologies",
+              skills: ["RStudio", "Git", "Maven", "AWS"],
+            },
+            {
+              title: "Databases",
+              skills: [
+                "SQL",
+                "NoSQL",
+                "Snowflake",
+                "Firebase",
+                "Database Schema",
+              ],
+            },
+            {
+              title: "Methodologies and Practices",
+              skills: ["Agile", "Scrum", "DevOps", "OOP", "TDD", "BDD"],
+            },
+            {
+              title: "Testing",
+              skills: ["WebDriver", "JUnit", "Cucumber", "Jest", "Postman"],
+            },
+          ].map((category, index) => (
+            <Row key={index} className="my-3">
+              <Col md={4}>
+                <h5 className="text-dark">{category.title}</h5>
+              </Col>
+              <Col md={8} className={styles.skillList}>
+                {category.skills.map((skill, i) => (
+                  <span key={i} className={`badge ${styles.skillTag}`}>
+                    {skill}
+                  </span>
+                ))}
+              </Col>
+            </Row>
+          ))}
+        </Container>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-5 bg-light">
+        <Container>
+          <h2 className="text-center mb-4">Coding Experience</h2>
+          <Row>
+            <Col md={8}>
+              <ul className={styles.experienceList}>
+                <li>
+                  <strong>Corecom Technology Academy:</strong> Solo backend and
+                  frontend projects developed for Corecom Technology.
+                </li>
+                <li>
+                  Assistant trainer for Test Automation cohorts, explaining
+                  concepts, debugging, and providing code advice.
+                </li>
+                <li>
+                  Courses in SQL, data warehousing with Snowflake, and Java
+                  development.
+                </li>
+                <li>
+                  <strong>University of Leeds:</strong> First-Class Honors in
+                  Mathematics, dissertation in Computational Applied Mathematics
+                  using Python.
+                </li>
+                <li>
+                  <strong>Northcoders:</strong> Full-time, 3-month software
+                  development bootcamp focused on JavaScript.
+                </li>
+                <li>
+                  <strong>AWS QA Certificates:</strong> AWS Technical
+                  Essentials, AWS Fundamentals, DevOps Fundamentals, and Cloud
+                  Literacy.
+                </li>
+                <li>
+                  <strong>Personal projects:</strong> Some of which can be found
+                  on the projects page.
+                </li>
+              </ul>
             </Col>
-            <Col
-              md={4}
-              className="d-flex align-items-center justify-content-center"
-            >
+            <Col md={4} className="text-center">
               <img
                 src={YoussefImage}
-                class="img-fluid"
-                alt="Image of Youssef"
-              ></img>
+                className={`${styles.profileImage} img-fluid`}
+                alt="Youssef Kawook"
+              />
             </Col>
           </Row>
         </Container>
       </section>
 
-      <section className={styles.projects}>
+      {/* Projects Section */}
+      <section className="py-5 bg-white">
         <Container>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={12} className="text-center">
-              <h2>Projects</h2>
-            </Col>
-          </Row>
-          <Row className="d-flex py-4 align-items-center justify-content-center">
-            <Col md={12} className="text-center">
-              <Link to="/Projects">
-                <Button
-                  className={`m-4 btn btn-primary btn-lg `}
-                  variant="primary"
-                  href="/Projects"
-                >
-                  View More
-                </Button>
-              </Link>
-            </Col>
-          </Row>
+          <h2 className="text-center mb-4">Top Projects</h2>
+          {topProjects.map((project, index) => (
+            <Card key={index} className="my-3 border-light shadow-sm">
+              <Card.Body>
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <p>
+                  <strong>Technologies:</strong>{" "}
+                  {project.technologies.join(", ")}
+                </p>
+                <div>
+                  {project.links.map((link, i) => (
+                    <Button
+                      key={i}
+                      variant="outline-primary"
+                      href={link.url}
+                      className="m-2"
+                      target="_blank"
+                    >
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
+              </Card.Body>
+            </Card>
+          ))}
+
+          <div className="text-center mt-4">
+            <Link to="/Projects">
+              <Button variant="primary" size="lg">
+                View More
+              </Button>
+            </Link>
+          </div>
         </Container>
       </section>
     </div>
   );
 };
+
+export default Home;

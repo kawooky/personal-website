@@ -1,85 +1,88 @@
+// src/components/Projects.js
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import styles from "./Projects.module.css";
-import SLImage from "./social-lift-picture.png";
-import { Link } from "react-router-dom";
-import NCNImage from "./NCN.png"
+import { projects } from "./projectsData"; // Adjust the path as necessary
 
-export const Projects = () => {
-  return (
-    <div className={styles.projects}>
-      <Col
-        md={12}
-        className="d-flex flex-column align-items-center justify-content-center py-4"
-      >
-        <h1>Projects</h1>
-      </Col>
-      <Container>
-        <Row className="d-flex py-4 align-items-center justify-content-center">
-          <Col md={4} className="text-start">
-            <Card className={styles["project-card"]}>
-              <Card.Img
-                src={SLImage}
-                className="img-fluid"
-                alt="Card Image"
-                // style={{ width: "200px", height: "auto" }}
-              />
-              <Card.Body className="">
-                <Card.Title>Social Lift</Card.Title>
-                <Card.Text>blah blah blah</Card.Text>
+export const Projects = () => (
+  <div className={styles.projects}>
+    <Container className="my-2">
+      <h2 className="text-center mb-4">Projects</h2>
 
-                <Link to={`/Home`}>
-                  <Button
-                    className={`btn btn-primary btn-lg ${styles.buttons}`}
-                    variant="primary"
-                  >
-                    View
-                  </Button>
-                </Link>
-                <Link to={`/Home`}>
-                  <Button
-                    className={`btn btn-primary btn-lg ${styles.buttons}`}
-                    variant="primary"
-                  >
-                    View
-                  </Button>
-                </Link>
-                <Link to={`/Home`}>
-                  <Button
-                    className={`btn btn-primary btn-lg ${styles.buttons}`}
-                    variant="primary"
-                  >
-                    View
-                  </Button>
-                </Link>
-                <Link to={`/Home`}>
-                  <Button
-                    className={`btn btn-primary btn-lg ${styles.buttons}`}
-                    variant="primary"
-                  >
-                    dronoughsroigjspojgpsegj
-                  </Button>
-                </Link>
-                <Link to={`/Home`}>
-                  <Button
-                    className={`btn btn-primary btn-lg ${styles.buttons}`}
-                    variant="primary"
-                  >
-                    View
-                  </Button>
-                </Link>
+      {/* Featured Projects Section */}
+      <div className="mb-4">
+        <Row className="mb-4">
+          {/* Full-width Card for Featured Projects */}
+          {projects.slice(0, 3).map((project, index) => (
+            <Col key={index} md={12} className="mb-3">
+              <Card className="mb-4" style={{ backgroundColor: "#e7f1ff" }}>
+                <Card.Body>
+                  <Card.Title>{project.title}</Card.Title>
+                  <Card.Text>{project.description}</Card.Text>
+                  <div className="technologies mb-2">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="badge bg-secondary me-1">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-3">
+                    {project.links.map((link, i) => (
+                      <Button
+                        key={i}
+                        variant="outline-primary"
+                        href={link.url}
+                        target="_blank"
+                        className="me-2 mb-2"
+                      >
+                        {link.label}
+                      </Button>
+                    ))}
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+
+      {/* Remaining Projects Section in Columns */}
+      <Row>
+        {projects.slice(3).map((project, index) => (
+          <Col md={4} key={index}>
+            <Card className="mb-4" style={{ minHeight: "200px" }}>
+              <Card.Body>
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <div className="technologies mb-2">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="badge bg-secondary me-1">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-3">
+                  {project.links.map((link, i) => (
+                    <Button
+                      key={i}
+                      variant="outline-primary"
+                      href={link.url}
+                      target="_blank"
+                      className="me-2 mb-2"
+                    >
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
               </Card.Body>
             </Card>
           </Col>
-          <Col md={4} className="text-center">
-            <h2>About Me</h2>
-          </Col>
-          <Col md={4} className="text-center">
-            <h2>About Me</h2>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
-};
+        ))}
+      </Row>
+    </Container>
+  </div>
+);
+
+export default Projects;

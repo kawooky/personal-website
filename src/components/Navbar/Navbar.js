@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.header}>
-        <h2>Youssef Kawook</h2>
+        <h2>YK</h2>
 
         <div className={styles["menu-toggle-container"]}>
           <span className={styles["menu-toggle"]} onClick={toggleMenu}>
@@ -57,24 +57,6 @@ export const Navbar = () => {
           onClick={closeMenu} // Close menu when clicked
         >
           Projects
-        </NavLink>
-        <NavLink
-          to="/L3"
-          className={({ isActive }) =>
-            isActive ? styles["active-nav-link"] : styles["nav-link"]
-          }
-          onClick={closeMenu} // Close menu when clicked
-        >
-          L3
-        </NavLink>
-        <NavLink
-          to="/L4"
-          className={({ isActive }) =>
-            isActive ? styles["active-nav-link"] : styles["nav-link"]
-          }
-          onClick={closeMenu} // Close menu when clicked
-        >
-          L4
         </NavLink>
       </div>
     </div>
