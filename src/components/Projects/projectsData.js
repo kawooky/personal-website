@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "CTA Loans",
+    title: "CTA Loans - Corcom",
     description:
       "This full-stack loan application integrates various AWS services and is designed as a training resource for future cohorts. It features a React and Bootstrap frontend hosted in an S3 bucket, with CodePipeline automating deployment from GitHub. The backend consists of Node.js RESTful APIs managed by AWS Lambda and API Gateway. Data is stored in AWS RDS with PostgreSQL. The project is secured within a custom VPC, complete with subnets, security groups, and an internet gateway, showcasing essential cloud-based application management skills.",
     technologies: [
@@ -23,7 +23,7 @@ export const projects = [
     ],
   },
   {
-    title: "Automated Marking",
+    title: "Automated Marking - Corcom",
     description:
       "A python script to automate the process of cloning from a list of Git repositories, detecting their programming languages, running compilation/validation processes, and logging the results to a selected excel file. Used by Corecom to increase efficiency of marking students work.",
     technologies: [
@@ -46,7 +46,7 @@ export const projects = [
     ],
   },
   {
-    title: "Job Market Insights Report",
+    title: "Job Market Insights Report - Corcom",
     description:
       "Used by Corecom to create PDF reports for potential clients, this project features a Python backend utilizing Beautiful Soup for data scraping from an external job market insights site. The React-based frontend provides user interaction, enabling efficient report generation and streamlined client outreach.",
     technologies: [
@@ -145,7 +145,7 @@ export const projects = [
   {
     title: "Dissertation",
     description:
-      "University of Leeds Mathematics bachelor's degree dissertation titled Computational Applied Mathematics. Using python to perform various numerical approximation schemes to approximate three important mathematical problems.",
+      "University of Leeds Mathematics bachelor's degree dissertation titled Computational Applied Mathematics. Using python to perform various numerical schemes to approximate three important mathematical problems.",
     technologies: ["Python", "LaTeX"],
     links: [
       {

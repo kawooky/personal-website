@@ -1,7 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import YoussefImage from "./10442350_8503992191299832-modified.png";
 import styles from "./Home.module.css";
 import { projects } from "../Projects/projectsData.js"; // Import the projects array
@@ -14,7 +13,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className={`${styles.hero} bg-light text-dark py-5`}>
         <Container className="text-center">
-          <Row className="align-items-center">
+          <Row className="my-4 align-items-center">
             <Col md={6} className="mx-auto">
               <h1 className={styles.heroTitle}>Youssef Kawook</h1>
               <p className={styles.heroSubtitle}>
@@ -47,7 +46,7 @@ const Home = () => {
             },
             {
               title: "Tools and Technologies",
-              skills: ["RStudio", "Git", "Maven", "AWS"],
+              skills: ["AWS", "RStudio", "Git", "Maven"],
             },
             {
               title: "Databases",
@@ -87,9 +86,11 @@ const Home = () => {
       {/* Experience Section */}
       <section className="py-5 bg-light">
         <Container>
-          <h2 className="text-center mb-4">Coding Experience</h2>
-          <Row>
-            <Col md={8}>
+          <h2 className="text-left mb-4">Coding Experience</h2>
+          <Row className="justify-content-center align-items-center">
+            <Col md={9} className="text-left">
+              {" "}
+              {/* Added text-center here */}
               <ul className={styles.experienceList}>
                 <li>
                   <strong>Corecom Technology Academy:</strong> Solo backend and
@@ -123,7 +124,7 @@ const Home = () => {
                 </li>
               </ul>
             </Col>
-            <Col md={4} className="text-center">
+            <Col md={3} className="text-center">
               <img
                 src={YoussefImage}
                 className={`${styles.profileImage} img-fluid`}
@@ -139,7 +140,11 @@ const Home = () => {
         <Container>
           <h2 className="text-center mb-4">Top Projects</h2>
           {topProjects.map((project, index) => (
-            <Card key={index} className="my-3 border-light shadow-sm">
+            <Card
+              key={index}
+              className="my-5 border-light shadow-sm"
+              style={{ backgroundColor: "#e7f1ff" }}
+            >
               <Card.Body>
                 <Card.Title>{project.title}</Card.Title>
                 <Card.Text>{project.description}</Card.Text>
@@ -165,11 +170,13 @@ const Home = () => {
           ))}
 
           <div className="text-center mt-4">
-            <Link to="/Projects">
-              <Button variant="primary" size="lg">
-                View More
-              </Button>
-            </Link>
+            <Button
+              variant="primary"
+              size="lg"
+              href="/personal-website/Projects"
+            >
+              View More
+            </Button>
           </div>
         </Container>
       </section>
