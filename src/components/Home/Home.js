@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import YoussefImage from "./10442350_8503992191299832-modified.png";
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 import { projects } from "../Projects/projectsData.js"; // Import the projects array
 
 const Home = () => {
@@ -170,13 +171,11 @@ const Home = () => {
           ))}
 
           <div className="text-center mt-4">
-            <Button
-              variant="primary"
-              size="lg"
-              href="/personal-website/Projects"
-            >
-              View More
-            </Button>
+            <Link to="/Projects">
+              <Button variant="primary" size="lg">
+                View More
+              </Button>
+            </Link>
           </div>
         </Container>
       </section>
