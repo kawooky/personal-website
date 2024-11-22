@@ -5,10 +5,12 @@ import Home from "./components/Home/Home";
 import { Projects } from "./components/Projects/Projects";
 import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
+import { ScrollToTop } from "./ScrollToTop";
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/Home" />} />

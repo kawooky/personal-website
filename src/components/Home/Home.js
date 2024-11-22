@@ -18,7 +18,7 @@ const Home = () => {
             <Col md={6} className="mx-auto">
               <h1 className={styles.heroTitle}>Youssef Kawook</h1>
               <p className={styles.heroSubtitle}>
-                Full Stack Developer based in Leeds, UK
+                Full Stack Developer based in Leeds, UK.
               </p>
             </Col>
           </Row>
@@ -172,7 +172,7 @@ const Home = () => {
 
           <div className="text-center mt-4">
             <Link to="/Projects">
-              <Button variant="primary" size="lg">
+              <Button variant="outline-primary" size="lg">
                 View More
               </Button>
             </Link>

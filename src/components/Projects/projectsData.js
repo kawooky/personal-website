@@ -4,9 +4,10 @@ export const projects = [
     description:
       "This full-stack loan application integrates various AWS services and is designed as a training resource for future cohorts. It features a React and Bootstrap frontend hosted in an S3 bucket, with CodePipeline automating deployment from GitHub. The backend consists of Node.js RESTful APIs managed by AWS Lambda and API Gateway. Data is stored in AWS RDS with PostgreSQL. The project is secured within a custom VPC, complete with subnets, security groups, and an internet gateway, showcasing essential cloud-based application management skills.",
     technologies: [
-      "JWT tokens",
+      "JWT Tokens",
       "AWS RDS",
       "CodePipeline",
+      "CI/CD",
       "S3",
       "API Gateway",
       "Lambda",
@@ -19,7 +20,10 @@ export const projects = [
         label: "Live Site",
         url: "http://loan-app-react-website.s3-website.eu-west-2.amazonaws.com/",
       },
-      { label: "GitHub Repo", url: "https://github.com/username/cta-loans" },
+      {
+        label: "GitHub Repo",
+        url: "https://github.com/corecomtechacademy/loan-app-website",
+      },
     ],
   },
   {
