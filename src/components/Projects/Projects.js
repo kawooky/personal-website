@@ -7,9 +7,9 @@ import styles from "./Projects.module.css";
 import { projects } from "./projectsData"; // Adjust the path as necessary
 
 export const Projects = () => (
-  <div className={styles.projects}>
-    <Container className="my-2">
-      <h2 className="text-center mb-4">Projects</h2>
+  <div className={`${styles.projects} bg-light`}>
+    <Container className="py-2">
+      <h2 className="text-center my-4">Projects</h2>
 
       {/* Featured Projects Section */}
       <div className="mb-4">
